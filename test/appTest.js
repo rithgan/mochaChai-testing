@@ -3,6 +3,8 @@ const sayHello = require("../app").sayHello;
 const addNumbers = require('../app').addNumbers;
 
 describe("App", () => {
+	describe('sayHello',()=>{
+
   it("sayHello should return hello", function () {
     let result = sayHello();
     assert.equal(result, "hello");
@@ -11,6 +13,9 @@ describe("App", () => {
 		let result = sayHello();
 		assert.typeOf(result,"string")
 	});
+
+	})
+	describe('addNumbers',()=>{
 
 	it('add Numbers should be positive',function(){
 		let result = addNumbers(5,1);
@@ -21,4 +26,5 @@ describe("App", () => {
 		let result = addNumbers();
 		assert.typeOf(result,"number")
 	});
+	})
 });
